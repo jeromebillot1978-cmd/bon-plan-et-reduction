@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mes liens de parrainage – Récupère de l'argent sur tes achats</title>
+<meta name="description" content="Inscris-toi via mes liens de parrainage iGraal, eBuyClub, Poulpeo et BoursoBank et récupère de l'argent sur tes achats.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d1a4a;--sun:#ffd23f;--mint:#2ee6a6;--coral:#ff5d73;--sky:#5ec8ff;--paper:#fffbee}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans",system-ui,sans-serif;line-height:1.55;overflow-x:hidden}
+h1,h2,h3{font-family:"Bricolage Grotesque","Arial Black",system-ui,sans-serif;line-height:1;margin:0}
+a:focus-visible,input:focus-visible{outline:3px solid var(--ink);outline-offset:3px}
+
+/* HERO */
+.hero{background:var(--sun);padding:64px 20px 96px;position:relative;text-align:center;border-bottom:4px solid var(--ink)}
+.hero h1{font-size:clamp(2.6rem,9vw,6rem);font-weight:800;letter-spacing:-.03em;max-width:12ch;margin:0 auto 20px}
+.hero h1 span{display:inline-block;background:var(--ink);color:var(--sun);padding:0 .18em;border-radius:.18em;transform:rotate(-2deg)}
+.hero p{max-width:520px;margin:0 auto 28px;font-size:1.15rem;font-weight:500}
+.cta{display:inline-block;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:999px;border:3px solid var(--ink);box-shadow:5px 5px 0 var(--coral);transition:transform .15s,box-shadow .15s}
+.cta:hover{transform:translate(-2px,-2px);box-shadow:7px 7px 0 var(--coral)}
+.coin{position:absolute;width:56px;height:56px;border-radius:50%;background:var(--paper);border:4px solid var(--ink);display:grid;place-items:center;font:800 1.5rem "Bricolage Grotesque",sans-serif;animation:float 4s ease-in-out infinite}
+.c1{left:6%;top:18%}.c2{right:8%;top:12%;animation-delay:-1.3s;width:72px;height:72px;font-size:2rem;background:var(--mint)}
+.c3{left:14%;bottom:12%;animation-delay:-2.4s;width:44px;height:44px;font-size:1.2rem;background:var(--coral);color:#fff}
+.c4{right:14%;bottom:16%;animation-delay:-.7s}
+@keyframes float{50%{transform:translateY(-16px) rotate(8deg)}}
+
+/* BANDE */
+.tape{background:var(--ink);color:var(--sun);overflow:hidden;white-space:nowrap;padding:12px 0;font:800 1.1rem "Bricolage Grotesque",sans-serif}
+.tape div{display:inline-block;animation:tape 22s linear infinite}
+@keyframes tape{to{transform:translateX(-50%)}}
+
+/* PARTENAIRES */
+.partners{max-width:1000px;margin:0 auto;padding:72px 20px 40px}
+.partners>h2{font-size:clamp(2rem,5vw,3.2rem);font-weight:800;letter-spacing:-.02em;margin-bottom:8px}
+.partners>p{margin:0 0 36px;font-weight:500}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.tile{border:4px solid var(--ink);border-radius:24px;padding:28px;display:flex;flex-direction:column;gap:14px;min-height:260px;box-shadow:8px 8px 0 var(--ink);transition:transform .2s,box-shadow .2s}
+.tile:hover{transform:translate(-3px,-3px) rotate(-.6deg);box-shadow:12px 12px 0 var(--ink)}
+.tile:nth-child(1){background:var(--mint)}
+.tile:nth-child(2){background:var(--sky)}
+.tile:nth-child(3){background:var(--coral);color:#fff}
+.tile:nth-child(4){background:var(--sun)}
+.tile h3{font-size:2.3rem;font-weight:800;letter-spacing:-.02em}
+.tile p{margin:0;flex:1;font-weight:500}
+.tile a{align-self:flex-start;background:var(--ink);color:#fff;text-decoration:none;font-weight:700;padding:12px 20px;border-radius:999px}
+.tile a:hover{background:#fff;color:var(--ink)}
+
+/* SIMULATEUR */
+.sim{max-width:760px;margin:40px auto 0;padding:0 20px 72px}
+.sim-box{background:var(--ink);color:#fff;border-radius:28px;padding:34px;text-align:center}
+.sim h2{font-size:clamp(1.6rem,4vw,2.3rem);font-weight:800;margin-bottom:6px}
+.sim small{color:#b9b6e6}
+.sim label{display:block;margin:22px 0 6px;font-weight:700}
+.sim input[type=range]{width:100%;accent-color:var(--sun);height:32px}
+.amount{font:800 clamp(3rem,10vw,5.5rem) "Bricolage Grotesque",sans-serif;color:var(--mint);letter-spacing:-.03em;line-height:1.1}
+
+footer{text-align:center;padding:0 20px 48px;font-size:.88rem;max-width:620px;margin:0 auto;color:#4b4880}
+
+
+/* MARCHANDS */
+.chip{position:absolute;background:var(--paper);border:3px solid var(--ink);border-radius:999px;padding:6px 16px;font:800 1rem "Bricolage Grotesque",sans-serif;box-shadow:3px 3px 0 var(--ink);white-space:nowrap}
+.h1{left:3%;top:52%;transform:rotate(-6deg)}.h2{left:20%;top:8%;transform:rotate(4deg)}.h3{right:20%;top:6%;transform:rotate(-3deg)}
+.h4{right:3%;top:50%;transform:rotate(6deg)}.h5{left:8%;bottom:6%;transform:rotate(3deg)}.h6{right:9%;bottom:5%;transform:rotate(-5deg)}
+.wall{max-width:1000px;margin:0 auto;padding:56px 20px 0;text-align:center}
+.wall h2{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:800;margin-bottom:18px}
+.wall ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:10px;justify-content:center}
+.wall li{border:3px solid var(--ink);border-radius:999px;padding:7px 18px;font:800 1.05rem "Bricolage Grotesque",sans-serif;background:#fff;transition:transform .15s}
+.wall li:nth-child(4n+1){background:var(--mint)}.wall li:nth-child(4n+2){background:var(--sky)}.wall li:nth-child(4n+3){background:var(--coral);color:#fff}.wall li:nth-child(4n){background:var(--sun)}
+.wall li:hover{transform:rotate(-3deg) scale(1.06)}
+.wall small{display:block;margin-top:14px;color:#4b4880}
+
+/* VIDEOS */
+.grid{align-items:start}
+.tile details{margin-top:2px}
+.tile summary{cursor:pointer;font-weight:700;list-style:none;display:inline-flex;align-items:center;gap:8px;border:3px solid var(--ink);border-radius:999px;padding:8px 16px;background:var(--paper);color:var(--ink)}
+.tile summary::-webkit-details-marker{display:none}
+.tile summary:hover{background:#fff}
+.tile details[open] summary{margin-bottom:12px}
+.vid{position:relative;padding-top:56.25%;border:3px solid var(--ink);border-radius:16px;overflow:hidden;background:#000}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vidlink{display:inline-block;margin-top:8px;font-size:.85rem;font-weight:700;color:inherit}
+.tile .actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+
+/* AVIS */
+.avis{max-width:1000px;margin:0 auto;padding:24px 20px 56px}
+.avis>h2{font-size:clamp(1.8rem,4.5vw,2.8rem);font-weight:800;letter-spacing:-.02em;margin-bottom:24px}
+.avis-list{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.av{background:#fff;border:3px solid var(--ink);border-left-width:14px;border-radius:18px;padding:20px 22px}
+.av h3{font-size:1.35rem;font-weight:800;margin-bottom:10px}
+.av ul{margin:0 0 10px;padding-left:1.1em}
+.av li{margin-bottom:4px}
+.av .plus{list-style:"✔  "}
+.av .moins{list-style:"ℹ  ";color:#4b4880}
+.av:nth-child(1){border-left-color:var(--mint)}.av:nth-child(2){border-left-color:var(--sky)}.av:nth-child(3){border-left-color:var(--coral)}.av:nth-child(4){border-left-color:var(--sun)}
+.temo{margin-top:30px}
+.temo blockquote{margin:0 0 12px;background:var(--ink);color:#fff;border-radius:18px;padding:18px 22px}
+.temo cite{display:block;margin-top:8px;font-style:normal;font-weight:700;color:var(--sun)}
+@media(max-width:680px){.avis-list{grid-template-columns:1fr}.grid{grid-template-columns:1fr}.coin,.chip{display:none}.tile{min-height:0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="coin c1">€</div><div class="coin c2">€</div><div class="coin c3">€</div><div class="coin c4">€</div>
+  <span class="chip h1">Amazon</span><span class="chip h2">Fnac</span><span class="chip h3">Booking</span>
+  <span class="chip h4">Zalando</span><span class="chip h5">Decathlon</span><span class="chip h6">Sephora</span>
+  <h1>Tes achats te <span>rapportent</span> enfin</h1>
+  <p>Tu achètes déjà en ligne : autant récupérer une partie de l'argent. Inscris-toi avec mes liens et profite des offres de bienvenue.</p>
+  <a class="cta" href="#partenaires">Je choisis mon site</a>
+</section>
+
+<div class="tape" aria-hidden="true"><div id="tape"></div></div>
+
+<section class="wall">
+  <h2>Chez tous tes marchands préférés</h2>
+  <ul id="marchands"></ul>
+  <small>Exemples de marchands souvent présents sur les sites de cashback. La liste et les taux varient selon chaque site.</small>
+</section>
+
+<section class="partners" id="partenaires">
+  <h2>4 sites, 4 façons d'y gagner</h2>
+  <p>Clique, inscris-toi, et c'est parti.</p>
+  <div class="grid" id="liste"></div>
+</section>
+
+<section class="avis">
+  <h2>Ce qu'il faut retenir de chaque site</h2>
+  <div class="avis-list" id="avis"></div>
+  <div class="temo" id="temo" hidden><h3>Ils en parlent</h3></div>
+</section>
+
+<section class="sim">
+  <div class="sim-box">
+    <h2>Combien tu pourrais récupérer ?</h2>
+    <small>Simple exemple avec 3 % de cashback : le taux réel varie selon les marchands.</small>
+    <label for="budget">Tes achats en ligne par mois : <span id="bval">150</span> €</label>
+    <input id="budget" type="range" min="20" max="1000" step="10" value="150">
+    <div>Sur un an :</div>
+    <div class="amount" id="gain">54 €</div>
+  </div>
+</section>
+
+<footer>Ces liens sont des liens de parrainage : je peux recevoir une récompense si tu t'inscris, et ça ne te coûte rien de plus.</footer>
+
+<script>
+const partenaires=[
+  {nom:"iGraal",desc:"Du cashback sur des milliers de boutiques, avec un bonus pour tes premiers achats.",url:"https://fr.igraal.com/parrainage?parrain=AG_5bd0abf88a6cc&utm_medium=raf&utm_source=refer_friend",video:"Pp4Lmxy4LAY"},
+  {nom:"eBuyClub",desc:"Cashback et bons plans chez de nombreux marchands partenaires.",url:"https://www.ebuyclub.com/inscription?parrain=Catmonangecm1",video:"UIxjtW2z8yM"},
+  {nom:"Poulpeo",desc:"Cumule du cashback à chaque commande et retire-le facilement.",url:"https://www.poulpeo.com/p/Mva1ab",video:"WEiO05fuxu4"},
+  {nom:"BoursoBank",desc:"La banque en ligne avec une offre de bienvenue pour les nouveaux clients.",url:"https://bour.so/p/wAl6fuiEUgV"}
+];
+const liste=document.getElementById("liste");
+partenaires.forEach(p=>{
+  const t=document.createElement("article");t.className="tile";
+  const h=document.createElement("h3");h.textContent=p.nom;
+  const d=document.createElement("p");d.textContent=p.desc;
+  const a=document.createElement("a");a.href=p.url;a.target="_blank";a.rel="sponsored noopener noreferrer";a.textContent="M'inscrire sur "+p.nom;
+  t.append(h,d);
+  if(p.video){
+    const det=document.createElement("details");
+    const sm=document.createElement("summary");sm.textContent="▶ Voir le tuto vidéo";
+    const w=document.createElement("div");w.className="vid";
+    const f=document.createElement("iframe");
+    f.src="https://www.youtube.com/embed/"+p.video;f.title="Tutoriel "+p.nom;f.loading="lazy";f.allowFullscreen=true;
+    f.allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
+    w.appendChild(f);
+    const l=document.createElement("a");l.className="vidlink";l.href="https://www.youtube.com/watch?v="+p.video;l.target="_blank";l.rel="noopener noreferrer";l.textContent="La vidéo ne s'affiche pas ? Ouvre-la sur YouTube";
+    det.append(sm,w,l);t.appendChild(det);
+  }
+  t.appendChild(a);liste.appendChild(t);
+});
+
+const resumes=[
+  {nom:"iGraal",plus:["Très large choix de marchands","Cartes cadeaux à prix réduit"],info:"Le taux change selon le marchand et le jour."},
+  {nom:"eBuyClub",plus:["Codes promo cumulables avec le cashback","Extension pour navigateur"],info:"Vérifie que le marchand est bien listé avant d'acheter."},
+  {nom:"Poulpeo",plus:["Application mobile pratique","Rappels quand tu visites un marchand partenaire"],info:"Le cashback est crédité après validation par le marchand."},
+  {nom:"BoursoBank",plus:["Carte gratuite","Pas de condition de revenus"],info:"La prime dépend de l'offre en cours : vérifie-la sur le site."}
+];
+const av=document.getElementById("avis");
+resumes.forEach(r=>{
+  const b=document.createElement("article");b.className="av";
+  const h=document.createElement("h3");h.textContent=r.nom;
+  const u=document.createElement("ul");
+  r.plus.forEach(x=>{const li=document.createElement("li");li.className="plus";li.textContent=x;u.appendChild(li)});
+  const i=document.createElement("ul");
+  const li2=document.createElement("li");li2.className="moins";li2.textContent=r.info;i.appendChild(li2);
+  b.append(h,u,i);av.appendChild(b);
+});
+// Vrais témoignages : colle-les ici, ils s'afficheront automatiquement.
+// Exemple : {texte:"Mon retour d'expérience…",auteur:"Prénom, ville"}
+const temoignages=[];
+if(temoignages.length){
+  const t=document.getElementById("temo");t.hidden=false;
+  temoignages.forEach(x=>{
+    const q=document.createElement("blockquote");q.textContent=x.texte;
+    const c=document.createElement("cite");c.textContent=x.auteur;q.appendChild(c);t.appendChild(q);
+  });
+}
+const mots=["Amazon","Fnac","Darty","Booking","Nike","Zalando","Sephora","Decathlon","Cdiscount","Boulanger","Leroy Merlin","IKEA","Adidas","Carrefour","Intermarché","Auchan","Uber Eats","Yves Rocher"];
+const mur=document.getElementById("marchands");
+mots.forEach(m=>{const li=document.createElement("li");li.textContent=m;mur.appendChild(li)});
+const seq=mots.map(m=>m+" ✦ ").join("").repeat(3);
+document.getElementById("tape").textContent=seq+seq;
+const b=document.getElementById("budget"),bv=document.getElementById("bval"),g=document.getElementById("gain");
+function maj(){bv.textContent=b.value;g.textContent=Math.round(b.value*12*0.03).toLocaleString("fr-FR")+" €"}
+b.addEventListener("input",maj);maj();
+</script>
+</body>
+</html>
