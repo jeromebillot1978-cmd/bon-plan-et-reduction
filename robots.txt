@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bon-plan-et-reduction.vercel.app/sitemap.xml
